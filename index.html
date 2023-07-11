@@ -5,35 +5,134 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Monarda Treats Home</title>
-    <link rel="stylesheet" href="css/style.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@100&family=Hind+Siliguri:wght@300&family=Nunito+Sans:ital@1&display=swap"
+        rel="stylesheet">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
     <div class="container">
-        <header>
-            <h1>Monarda Treats</h1>
-            <p>View our selection of goods, order catering, or just check us out!</p>
-            <nav>
-                <ul>
-                    <li><a href="catering.html">Order Catering</a></li>
-                    <li><a href="menu.html">View Menu</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <h2>About Us</h2>
-            <p>
-                Monarda Treats is a local business in Ottawa made for all baked goods lovers. Our fine selection of cakes, breads, croissants, and pies have won serveral awards over the years.
-            </p>
-            <h2>Our Mission</h2>
-            <p>
-                We have always been a community based business, and we have no intention of ever changing that. We love bringing people together and hosting events to share our love of the city &#40;and yummy treats&#41; together as one big family!
-            </p>
-        </main>
-        <footer>
-            Copyright &#64;MonardaTreats, 2023
-        </footer>
+
+        <div class="maxwidth">
+            <!-- header start -->
+            <header>
+                <h1>Monarda Treats</h1>
+
+                <nav>
+                    <label for="menucheck" class="contrmenu"><i class="fa-solid fa-bars"
+                            style="color: #bf9872; background-color:#301F19; padding:10px; border-radius:4px;"></i></label>
+                    <ul class="navbar">
+                        <input type="checkbox" id="menucheck">
+                        <span class="menustyle">
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#mission">Mission</a></li>
+                            <li><a href="#activities">Activities</a></li>
+                            <li><a href="#come">Location</a></li>
+                        </span>
+                    </ul>
+
+                </nav>
+            </header>
+
+            <!-- main start -->
+            <main>
+                <div class="pages">
+                    <p>order food</p>
+                    <div class="flexchild">
+                        <a href="catering.html" target="_blank"><img src="images/catering.jpg"
+                                alt="Image of catering"></a>
+                    </div>
+                    <div class="flexchild">
+                        <a href="menu.html" target="_blank"><img src="images/menu.jpg" alt="Image of pastries"></a>
+                    </div>
+                </div>
+
+                <div class="about" id="about">
+                    <h2>About Us</h2>
+                    <p>
+                        Monarda Treats is a local business in Ottawa made for all baked goods lovers. Our fine selection
+                        of
+                        cakes, breads, croissants, and pies have won serveral awards over the years.
+                    </p>
+                </div>
+
+                <div class="mission" id="mission">
+                    <h2>Our Mission</h2>
+                    <p>
+                        We have always been a community based business, and we have no intention of ever changing that.
+                        We
+                        love
+                        bringing people together and hosting events to share our love of the city &#40;and yummy
+                        treats&#41;
+                        together as one big family!
+                    </p>
+                </div>
+
+                <div class="activities" id="activities">
+                    <h2>Activities</h2>
+                    <p>
+                        This location offers a beautiful venue to host anything from local music nights to full wedding
+                        ceremonies thanks to our backyard garden. Capacity up to 90 people!
+                    </p>
+                    <div>
+                        <h3>Upcoming activities</h3>
+                        <dl>
+                            <dt>Live music night</dt>
+                            <dd>July 28th, doors at 8:00pm, $7 entrance</dd>
+
+                            <dt>Backyard garden jewlery sale</dt>
+                            <dd>August 1st, noon to close, in collaboration with Mysc Jewels!</dd>
+
+                            <dt>Beebalms open mic comedy night</dt>
+                            <dd>August 12th, doors at 7:30pm, $5 entrance</dd>
+                        </dl>
+                    </div>
+                    <div>
+                        **IMG**
+                    </div>
+                </div>
+
+                <div class="come" id="come">
+                    <h2>Come See Us!</h2>
+                    <div class="map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d1980.2983443365742!2d-75.69442668972432!3d45.41811531598974!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDXCsDI1JzA1LjkiTiA3NcKwNDEnMzUuNCJX!5e0!3m2!1sen!2sca!4v1689029165414!5m2!1sen!2sca"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="info">
+                        <h3>Hours</h3>
+                        <p>
+                            Mon-Thu: Noon to 11:00pm<br>
+                            Fri-Sun: Noon to Midnight
+                        </p>
+                        <h3>Get in touch</h3>
+                        <p>
+                            Email us at monardatreatscafe@info<br>
+                            or<br>
+                            Call us at 613-852-8562
+                        </p>
+                    </div>
+                </div>
+
+            </main>
+
+            <!-- footer -->
+            <footer>
+                Copyright &#64;MonardaTreats, 2023
+            </footer>
+        </div>
     </div>
 </body>
 
