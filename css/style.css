@@ -230,14 +230,6 @@ footer a{
         right:0;
         top:0;
     }
-
-/* accessibility*/
-    .link:focus{
-        display:block;
-        position:fixed;
-        top:0;
-        right:0;
-    }
     
     .menustyle{
         display:flex;
@@ -281,10 +273,6 @@ footer a{
         right:0;
     }
 
-    .top{
-        visibility:visible;
-        display:block;
-    }
 
     .pages{
         flex-direction:row;
@@ -315,7 +303,7 @@ footer a{
         "map info"
         ;
     }
-    
+
 /*another animation*/
     .come:hover{
         animation-name:swipe;
