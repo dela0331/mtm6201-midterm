@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Monarda Treats Home</title>
     <!-- google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
+    <link rel="preconnect" itemprop="url" href="https://fonts.googleapis.com">
+    <link rel="preconnect" itemprop="url" href="https://fonts.gstatic.com" crossorigin>
+    <link itemprop="url"
         href="https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@100&family=Hind+Siliguri:wght@300&family=Nunito+Sans:ital@1&display=swap"
         rel="stylesheet">
+    <link itemprop="url"href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">
 
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -27,18 +28,20 @@
         <div class="maxwidth">
             <!-- header start -->
             <header>
-                <h1>Monarda Treats</h1>
+                <h1 id="top" itemprop="localbusiness">Monarda Treats</h1>
 
-                <nav>
-                    <label for="menucheck" class="contrmenu"><i class="fa-solid fa-bars"
+                <!-- internal nav -->
+                <nav role="menu" aria-label="Intrapage menu">
+                    <label for="menucheck" class="contrmenu"><i tabindex=0 class="fa-solid fa-bars"
                             style="color: #bf9872; background-color:#301F19; padding:10px; border-radius:4px;"></i></label>
-                    <ul class="navbar">
+                    <ul class="navbar" id="menu">
                         <input type="checkbox" id="menucheck">
-                        <span class="menustyle">
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#mission">Mission</a></li>
-                            <li><a href="#activities">Activities</a></li>
-                            <li><a href="#come">Location</a></li>
+                        <span class="menustyle" >
+                            <li><a class="link" href="#about">About</a></li>
+                            <li><a class="link" href="#mission">Mission</a></li>
+                            <li><a class="link" href="#activities">Activities</a></li>
+                            <li><a class="link" href="#come">Location</a></li>
+                            <li class="link" class="top"><a class="top" href="#top">Top</a></li>
                         </span>
                     </ul>
 
@@ -47,18 +50,25 @@
 
             <!-- main start -->
             <main>
-                <div class="pages">
-                    <p>order food</p>
+                <!-- external pages nav -->
+                <div class="pages" role="menu" aria-label="Interpage menu">
                     <div class="flexchild">
-                        <a href="catering.html" target="_blank"><img src="images/catering.jpg"
-                                alt="Image of catering"></a>
+                        <div class="innerdiv">Order Catering</div>
+                        <a href="catering.html" target="_blank"><img src="images/catering.jpg" alt="Image of catering" 
+                            srcset="images/catering2.jpg,
+                                    images/catering.jpg 2x"></a>
+
                     </div>
                     <div class="flexchild">
-                        <a href="menu.html" target="_blank"><img src="images/menu.jpg" alt="Image of pastries"></a>
+                        <div class="innerdiv">View Menu</div>
+                        <a href="menu.html" target="_blank"><img src="images/menu.jpg" alt="Image of pastries" srcset="images/menu2.jpg,
+                                            images/menu.jpg 2x"></a>
+
                     </div>
                 </div>
 
-                <div class="about" id="about">
+                <!-- about start -->
+                <div class="about" id="about" itemscope>
                     <h2>About Us</h2>
                     <p>
                         Monarda Treats is a local business in Ottawa made for all baked goods lovers. Our fine selection
@@ -67,6 +77,7 @@
                     </p>
                 </div>
 
+                <!-- mission start -->
                 <div class="mission" id="mission">
                     <h2>Our Mission</h2>
                     <p>
@@ -79,61 +90,104 @@
                     </p>
                 </div>
 
+                <!-- activities start -->
                 <div class="activities" id="activities">
                     <h2>Activities</h2>
                     <p>
                         This location offers a beautiful venue to host anything from local music nights to full wedding
                         ceremonies thanks to our backyard garden. Capacity up to 90 people!
                     </p>
-                    <div>
-                        <h3>Upcoming activities</h3>
-                        <dl>
-                            <dt>Live music night</dt>
-                            <dd>July 28th, doors at 8:00pm, $7 entrance</dd>
 
-                            <dt>Backyard garden jewlery sale</dt>
-                            <dd>August 1st, noon to close, in collaboration with Mysc Jewels!</dd>
 
-                            <dt>Beebalms open mic comedy night</dt>
-                            <dd>August 12th, doors at 7:30pm, $5 entrance</dd>
-                        </dl>
+                    <h3>Upcoming activities</h3>
+                    <div class="activitiesgrid">
+                        <div>
+                            <dl>
+                                <dt>Live music night</dt>
+                                <dd>July 28th, doors at 8:00pm, $7 entrance</dd>
+
+                                <dt>Backyard garden jewlery sale</dt>
+                                <dd>August 1st, noon to close, in collaboration with Mysc Jewels!</dd>
+
+                                <dt>Beebalms open mic comedy night</dt>
+                                <dd>August 12th, doors at 7:30pm, $5 entrance</dd>
+                            </dl>
+                        </div>
+                        <div>
+                            <img class="mic" src="images/mic.jpg" alt="Picture of microphone" srcset="images/mic2.jpg,
+                                    images/mic.jpg 2x">
+                        </div>
                     </div>
-                    <div>
-                        **IMG**
+
+                    <!-- location and hours start -->
+                    <div class="come" id="come">
+                        <h2>Come See Us!</h2>
+                        <div class="map">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d1980.2983443365742!2d-75.69442668972432!3d45.41811531598974!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDXCsDI1JzA1LjkiTiA3NcKwNDEnMzUuNCJX!5e0!3m2!1sen!2sca!4v1689029165414!5m2!1sen!2sca"
+                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <div class="info">
+                            <h3>Hours</h3>
+                            <p>
+                                Mon-Thu: Noon to 11:00pm<br>
+                                Fri-Sun: Noon to Midnight
+                            </p>
+                            <h3>Get in touch</h3>
+                            <p>
+                                Email us at monardatreatscafe@info<br>
+                                or<br>
+                                Call us at 613-852-8562
+                            </p>
+                        </div>
                     </div>
                 </div>
-
-                <div class="come" id="come">
-                    <h2>Come See Us!</h2>
-                    <div class="map">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d1980.2983443365742!2d-75.69442668972432!3d45.41811531598974!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDXCsDI1JzA1LjkiTiA3NcKwNDEnMzUuNCJX!5e0!3m2!1sen!2sca!4v1689029165414!5m2!1sen!2sca"
-                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                    <div class="info">
-                        <h3>Hours</h3>
-                        <p>
-                            Mon-Thu: Noon to 11:00pm<br>
-                            Fri-Sun: Noon to Midnight
-                        </p>
-                        <h3>Get in touch</h3>
-                        <p>
-                            Email us at monardatreatscafe@info<br>
-                            or<br>
-                            Call us at 613-852-8562
-                        </p>
-                    </div>
-                </div>
-
             </main>
-
             <!-- footer -->
             <footer>
-                Copyright &#64;MonardaTreats, 2023
+                Copyright &#64;MonardaTreats, 2023<br>
+                <a href="#top">Top</a>
             </footer>
         </div>
     </div>
 </body>
 
 </html>
+
+<!-- JSON-LD markup generated by Google Structured Data Markup Helper. -->
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Restaurant",
+  "name": "Monarda Treats",
+  "image": [
+    "http://www.googleusercontent.com/images/catering.jpg",
+    "http://www.googleusercontent.com/images/menu.jpg",
+    "http://www.googleusercontent.com/images/mic.jpg"
+  ],
+  "telephone": "613-852-8562",
+  "email": "",
+  "menu": "",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": {
+        "@type": "DayOfWeek",
+        "name": "Mon-Thu"
+      },
+      "opens": "Please insert valid ISO 8601 date/time here. Examples: 2015-07-27 or 2015-07-27T15:30",
+      "closes": "Please insert valid ISO 8601 date/time here. Examples: 2015-07-27 or 2015-07-27T15:30"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": {
+        "@type": "DayOfWeek",
+        "name": "Fri-Sun"
+      },
+      "opens": "Please insert valid ISO 8601 date/time here. Examples: 2015-07-27 or 2015-07-27T15:30",
+      "closes": "Please insert valid ISO 8601 date/time here. Examples: 2015-07-27 or 2015-07-27T15:30"
+    }
+  ]
+}
+</script>
